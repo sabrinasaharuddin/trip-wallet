@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Korea Trip Wallet</title>
+<meta name="description" content="Offline expense tracker for the South Korea trip, 6–12 Nov 2026.">
+<meta name="theme-color" content="#FFF8F1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Trip Wallet">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="brand-ico" aria-hidden="true">🇰🇷</span>
+    <div>
+      <h1>Korea Trip Wallet</h1>
+      <p class="tagline"><span lang="ko">여행 가계부</span> · <span id="tripBadge"></span></p>
+    </div>
+  </div>
+  <a class="icon-btn" href="#/settings" aria-label="Settings and backup">⚙️</a>
+</header>
+
+<div id="offlinePill" class="offline-pill" hidden>Offline · everything still works and saves on this phone</div>
+
+<main id="view" tabindex="-1"></main>
+
+<nav class="tabs" aria-label="Main">
+  <a href="#/dash" data-tab="dash"><span aria-hidden="true">🏠</span>Home</a>
+  <a href="#/add" data-tab="add" class="tab-add"><span aria-hidden="true">＋</span>Add</a>
+  <a href="#/history" data-tab="history"><span aria-hidden="true">📒</span>History</a>
+</nav>
+
+<div id="modal-root"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+
+<script src="app.js"></script>
+</body>
+</html>
